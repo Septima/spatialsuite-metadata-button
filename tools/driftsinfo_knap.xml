@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tool>
+
+    <requires>
+        <file type="script" name="/js/standard/cbkort.js" priority="1"/>
+    </requires>
+    
+    <cbinfo-metadata>
+        <param name="tool.help.text"><![CDATA[]]></param>
+    </cbinfo-metadata>
+
+    <displayname>Driftsinfo</displayname>
+    <tooltip>Driftsinfo (Åbner i nyt vindue)</tooltip>
+    <onclick>driftsinfo_open</onclick>
+
+    <jssrc><![CDATA[
+		function driftsinfo_open(button) {
+            try {
+                window.open('http://driftsinfo.hjoerring.dk');
+            } catch (e) {         
+            }; 
+		}
+        
+    ]]></jssrc>
+</tool>

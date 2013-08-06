@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool type="plugin">
+    
+    <src><![CDATA[
+    	metadata_set();
+    ]]></src>
+    
+    <jssrc><![CDATA[
+		function metadata_set() {
+			for(var i=0;i<cbKort.themeContainer.elements.length;i++) {
+				var group = cbKort.themeContainer.elements[i];
+				for (var j=0;j<group.elements.length;j++) {
+					var theme = group.elements[j];
+					var metadata = {};
+					for (var k=0;k<theme.copyright.length;k++) {
+						metadata[theme.copyright[k].name] = theme.copyright[k].value;
+					}
+					if (metadata['metadata.url']) {
+						var m = jQuery('<div style="width:16px;height:17px;margin-right:2px;float: right;background-image: url(/skins/standard/base_dark/images/buttons/s_info.png);background-position: center top;background-repeat: no-repeat;"></div>');
+						m.click(SpatialMap.Function.bind(function (metadata) {
+							window.open(metadata['metadata.url']);
+							return false;
+						},m,metadata));
+						m.hover(function () {jQuery(this).css({'border':'1px solid #999'})},function () {jQuery(this).css({'border':'1px solid #fff'})})
+						jQuery('#theme_div_'+theme.name).prepend(m);
+					}
+				}
+			}
+		}
+    ]]></jssrc>
+</tool>

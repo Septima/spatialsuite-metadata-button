@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy>
+    <version>2.8.0</version>
+    <stoponerror>false</stoponerror>
+    
+    <makedir dir="[cbinfo.wwwroot.dir]/modules/metadata-button/html"/>
+    <copydir fromdir="[module:metadata-button.dir]/html" todir="[cbinfo.wwwroot.dir]/modules/metadata-button/html" />
+    <param name="module.metadata-button.url">[cbinfo.base.url]/modules/metadata-button/html/</param>
+</deploy>
