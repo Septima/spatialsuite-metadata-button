@@ -14,7 +14,7 @@ This module creates a link from a theme in Spatial Map to a predefined html page
 
 1.b:  add this to  [cbinfo.modules]:
 ```xml
-    <module name="meta-button" dir="septima/metadata-button"/>
+    <module name="metadata-button" dir="septima/metadata-button"/>
 ```
 Consider using another name like customer-name instead of meta-button
 
