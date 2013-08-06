@@ -17,6 +17,7 @@ This module creates a link from a theme in Spatial Map to a predefined html page
     <module name="meta-button" dir="septima/metadata-button"/>
 ```
 Consider using another name like customer-name instead of meta-button
+
 2:    configure module
 
 2.a:  add html files containing metadata into 
@@ -27,7 +28,7 @@ html files will be available at http://site.com/modules/metadata-button/html
 
 2.b: add metdata button to theme:
 ```xml
-<param name="metadata.url">[module.meta-button.url]/DDOland-2010.htm</param>
+<param name="metadata.url">[module.metadata-button.url]/DDOland-2010.htm</param>
 
 ```
 # Licens
