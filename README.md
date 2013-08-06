@@ -26,9 +26,10 @@ Consider using another name like customer-name instead of meta-button
 html files will be available at http://site.com/modules/metadata-button/html
 
 2.b: add metdata button to theme:
+```xml
 <param name="metadata.url">[module.meta-button.url]/DDOland-2010.htm</param>
 
-
+```
 # Licens
 
 This is published under MIT license
