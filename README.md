@@ -5,7 +5,8 @@ metadata-button
 
 This module creates a link from a theme in Spatial Map to a predefined html page with theme metadata
 
-Note: Currently only works in classic theme selector 
+Note: You only need this module if you are using the "classic" theme selector. In the "themestore" theme selector
+you only need to add metadata url described in 2.a.
 
  see demo here: http://sps-demo.septima.dk/cbkort?profile=metadata-button
 #Installation
@@ -18,21 +19,20 @@ Note: Currently only works in classic theme selector
 ```xml
     <module name="metadata-button" dir="septima/metadata-button"/>
 ```
-Consider using another name like customer-name instead of meta-button
 
 2:    configure module
 
-2.a:  add html files containing metadata into 
-
-[cbinfo.config.dir]/modules/septima/metadata-button/html
-
-html files will be available at http://site.com/modules/metadata-button/html
-
-2.b: add metdata button to theme:
+2.a: Add metdata url to one or more themes:
 ```xml
-<param name="metadata.url">[module.metadata-button.url]/DDOland-2010.htm</param>
-
+<param name="metadata.url">http://septima.dk</param>
 ```
+
+2.b:  Add plugin to relevant profiles. 
+```xml
+        <tool module="metadata-button" name="metadata"/>
+```
+A button will only be visible on the themes in the themeselector if the plugin is added to the profile.
+      
 # Licens
 
 This is published under MIT license
